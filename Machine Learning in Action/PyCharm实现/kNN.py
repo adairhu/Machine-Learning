@@ -89,7 +89,7 @@ def algTest():
                                    labels[numTestSet:numDataSet],7)
         #print('the classifier result: %d, the real answer is: %d'\
         #     %(classifyResult, labels[i]))
-        if(classifyResult != labels[i]):
+        if classifyResult != labels[i]:
             errorCount += 1
     print('the total error rate is: %f' % (errorCount / float(numTestSet)))
 
@@ -104,6 +104,7 @@ def classifyPerson():
     inArr = [ffMiles, percentTats, iceCream]
     classifyResult = classify0((inArr - minVal) / ranges, normDataSet, labels, 7)
     print('你可能对这个人的评价是：%s' % resultList[classifyResult - 1])
+
 
 if __name__ == '__main__':
 
