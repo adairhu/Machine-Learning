@@ -18,7 +18,7 @@ def classify0(inX, dataSet, labels, k):
     sqrDiffMat = diffMat ** 2
     sqrDistances = sqrDiffMat.sum(axis=1)
     distances = sqrDistances ** 0.5
-    sortedDistIndicies = distances.argsort()
+    sortedDistIndicies = d3istances.argsort()
     classCount = {}
     for i in range(k):
         voteLabel = labels[sortedDistIndicies[i]]
@@ -85,7 +85,7 @@ def algTest():
     numTestSet = int(numDataSet * testRatio)
     errorCount = 0
     for i in range(numTestSet):
-        classifyResult = classify0(normDataSet[i,:], normDataSet[numTestSet:numDataSet,:],\
+        classifyResult = classify0(normDataSet[i,:], normDataSet[numTestSet:numDataSet,:],a'q'\
                                    labels[numTestSet:numDataSet],7)
         #print('the classifier result: %d, the real answer is: %d'\
         #     %(classifyResult, labels[i]))
